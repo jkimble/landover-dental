@@ -1,0 +1,827 @@
+/*
+Theme Name: Landover Dental
+Theme URI: /landover-dental/
+Description: Theme for Landover Dental Associates, based on Genesis Block
+Author: Justin Kimble
+Template: genesis-block-theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-column, responsive-layout, flexboxgrid
+Text Domain: landoverdental
+*/
+/* ====================================================
+    imports
+======================================================*/
+@import url('../landoverdental/css/flexboxgrid/css/flexboxgrid.css');
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasanscondensed/v10/wEOjEADFm8hSaQTFG18FErVhsC9x-tarWZXtqA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasanscondensed/v10/wEOsEADFm8hSaQTFG18FErVhsC9x-tarWTnMiMM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasanscondensed/v10/wEOsEADFm8hSaQTFG18FErVhsC9x-tarWV3PiMM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasanscondensed/v10/wEOhEADFm8hSaQTFG18FErVhsC9x-tarYfE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasanscondensed/v10/wEOsEADFm8hSaQTFG18FErVhsC9x-tarWQXOiMM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasanscondensed/v10/wEOsEADFm8hSaQTFG18FErVhsC9x-tarWSnJiMM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasanscondensed/v10/wEOsEADFm8hSaQTFG18FErVhsC9x-tarWU3IiMM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasanscondensed/v10/wEOsEADFm8hSaQTFG18FErVhsC9x-tarWVHLiMM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firasanscondensed/v10/wEOsEADFm8hSaQTFG18FErVhsC9x-tarWXXKiMM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v23/S6u8w4BMUTPHh30wWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh7USew8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh6UVew8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v23/S6u9w4BMUTPHh50Xew8.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vUDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebukDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiukDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfFukDQ.ttf) format('truetype');
+}
+/* ====================================================
+    theme resets
+======================================================*/
+#page {
+  padding: 0;
+}
+/* ====================================================
+    global styles
+======================================================*/
+html,
+body {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  color: #464657;
+}
+p,
+address {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  color: #191941;
+  font-weight: normal;
+}
+h1 {
+  font-size: 45px;
+  line-height: 55px;
+  font-weight: bold;
+}
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.btnmain {
+  background-color: transparent;
+  border: 3px solid #3252DB;
+  border-radius: 15px;
+  color: #000;
+  font-family: 'Lato';
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 35px;
+  display: inline-block;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.btnmain:hover,
+.btnmain:focus {
+  background-color: #3252DB;
+  color: #fff;
+}
+.btnmain_sm {
+  background-color: transparent;
+  border: 3px solid #3252DB;
+  border-radius: 15px;
+  color: #000;
+  font-family: 'Lato';
+  font-size: 21px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 35px;
+  display: inline-block;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 5px 10px;
+}
+.btnmain_sm:hover,
+.btnmain_sm:focus {
+  background-color: #3252DB;
+  color: #fff;
+}
+.textlink {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #191941;
+  font-weight: bold;
+  border-bottom: 2px solid #11112d;
+  padding-bottom: 3px;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.textlink:hover,
+.textlink:focus {
+  color: #3252DB;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #05d2f8;
+}
+.textlink_alt {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #191941;
+  font-weight: bold;
+  padding-bottom: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.textlink_alt:hover,
+.textlink_alt:focus {
+  color: #3252DB;
+}
+.textlink_alt::after {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  content: '\f0da';
+  font-family: 'Font Awesome 5 Free';
+  position: relative;
+  left: 0.5rem;
+}
+.textlink_alt:hover::after,
+.textlink_alt:focus::after {
+  left: 1.5rem;
+  color: #3252DB;
+}
+.basetransition {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.text-icon {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: #000;
+  font-weight: 400;
+}
+.text-icon span {
+  color: #3252DB;
+  font-weight: bold;
+  display: block;
+}
+.font-icon::after {
+  font-family: 'Font Awesome 5 Free';
+}
+/* ====================================================
+    header
+======================================================*/
+#header {
+  padding: 2rem;
+  border-bottom: 3px solid #c1c1c18f;
+}
+#header .menu-col #mega-menu-wrap-primary {
+  background: #fff !important;
+}
+#header .menu-col #mega-menu-wrap-primary ul#mega-menu-primary {
+  text-align: right;
+}
+#header .menu-col #mega-menu-wrap-primary ul#mega-menu-primary li a {
+  font-family: 'Lato', sans-serif;
+  line-height: 22px;
+  color: #191941;
+  font-weight: bold;
+  border-bottom: 2px solid #11112d;
+  padding-bottom: 3px;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  margin: 0 10px;
+  font-size: 18px;
+  line-height: 40px;
+  background: #fff;
+}
+#header .menu-col #mega-menu-wrap-primary ul#mega-menu-primary li a:hover,
+#header .menu-col #mega-menu-wrap-primary ul#mega-menu-primary li a:focus {
+  color: #3252DB;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #05d2f8;
+}
+#header .menu-col #mega-menu-wrap-primary ul#mega-menu-primary li a:hover {
+  background: #fff;
+}
+#header .menu-col #mega-menu-wrap-primary ul#mega-menu-primary li a .mega-indicator::after {
+  vertical-align: unset;
+}
+#header .menu-col #mega-menu-wrap-primary ul#mega-menu-primary li.mega-current-menu-item a {
+  background: #fff !important;
+  color: #3252DB;
+  border-bottom: 2px solid #05d2f8;
+}
+#header .menu-col #mega-menu-wrap-primary ul#mega-menu-primary li.mega-current-menu-parent a {
+  color: #3252DB;
+  border-bottom: 2px solid #05d2f8;
+}
+#header .menu-col #mega-menu-wrap-primary ul.mega-sub-menu li a {
+  color: #191941 !important;
+  border: 0 !important;
+  padding: 0 10px !important;
+}
+#header .menu-col #mega-menu-wrap-primary ul.mega-sub-menu li a:hover,
+#header .menu-col #mega-menu-wrap-primary ul.mega-sub-menu li a:focus {
+  color: #3252DB !important;
+}
+#header .menu-col #mega-menu-wrap-primary ul.mega-sub-menu li.mega-current-menu-item a {
+  color: #3252DB !important;
+}
+#header .menu-col #mega-menu-wrap-primary .mega-menu-toggle div {
+  background: #fff !important;
+}
+/* ====================================================
+    footer
+======================================================*/
+#footer__main {
+  background-color: #76adce2b;
+  padding: 3rem 2rem 0;
+  border-top: 3px solid #76adce63;
+}
+@media (max-width: 767px) {
+  #footer__main .footer__row .info-col {
+    order: 3;
+    margin-top: 3.5rem;
+  }
+}
+#footer__main .footer__row .info-col img {
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  #footer__main .footer__row .navcol {
+    margin-bottom: 3rem;
+  }
+}
+#footer__main .footer__row .navcol #menu-footer-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#footer__main .footer__row .navcol #menu-footer-nav li#menu-item-286 a[href='/procedures/'] {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #191941;
+  font-weight: bold;
+  border-bottom: 2px solid #11112d;
+  padding-bottom: 3px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+#footer__main .footer__row .navcol #menu-footer-nav li#menu-item-286 ul.sub-menu {
+  margin: 0;
+  list-style: none;
+  columns: 2;
+  text-align: left;
+}
+#footer__main .footer__row .navcol #menu-footer-nav li#menu-item-286 ul.sub-menu li a {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: normal;
+}
+#footer__main .footer__row_copy {
+  margin-top: 20px;
+}
+#footer__main .footer__row_copy p {
+  color: #62707c;
+}
+#footer__main .footer__row_copy p.copy {
+  margin-bottom: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  color: #363636;
+}
+#footer__main .footer__row_copy a {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  color: #363636;
+}
+#footer__main .footer__row_copy a:hover,
+#footer__main .footer__row_copy a:focus {
+  text-decoration: underline;
+}
+/* ====================================================
+    home
+======================================================*/
+#homepage .content_row {
+  padding: 3rem 2rem;
+}
+/* ====================================================
+    contact page
+======================================================*/
+#contact-page.container-fluid {
+  padding: 0;
+}
+#contact-page.container-fluid .row {
+  max-width: 100%;
+}
+#contact-page.container-fluid .row .page-col {
+  padding: 5rem 2rem;
+}
+#contact-page.container-fluid .row .page-col.info-half {
+  background-color: #76adce2b;
+}
+#contact-page.container-fluid .row .page-col.info-half .form-wrap {
+  text-align: left;
+}
+#contact-page.container-fluid .row .page-col.map-half {
+  background-color: rgba(5, 211, 247, 0.2);
+}
+#contact-page.container-fluid .row .page-col .col-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#contact-page.container-fluid .row .page-col .contact-info {
+  margin-top: 4rem;
+}
+#contact-page.container-fluid .row .page-col .contact-info .inforow {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 2rem 0;
+}
+#contact-page.container-fluid .row .page-col .contact-info .inforow i.fas {
+  color: #3252DB;
+  font-size: 25px;
+}
+#contact-page.container-fluid .row .page-col .contact-info .inforow a,
+#contact-page.container-fluid .row .page-col .contact-info .inforow address {
+  margin: 0 0 0 2rem;
+}
+#contact-page.container-fluid .row .page-col .contact-info .inforow address a {
+  margin: 0;
+}
+#contact-page.container-fluid .row .page-col .contact-info .inforow .textlink {
+  padding: 0 !important;
+}
+#contact-page.container-fluid .row .page-col iframe {
+  max-height: 350px;
+}
+/* ====================================================
+    Dentist Page
+======================================================*/
+.single-doctors .hero {
+  background-color: #76adce2b;
+  background-image: none !important;
+}
+.single-doctors .hero .hero-row {
+  max-width: 100%;
+}
+.single-doctors #dentist-page {
+  padding: 2rem;
+}
+.single-doctors #dentist-page .content-row .doc-col img {
+  border-radius: 15px;
+  margin: 2.5rem 0;
+}
+.single-doctors #dentist-page .content-row .doc-col .textcontain {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.single-doctors #dentist-page .content-row .doc-col .textcontain h4,
+.single-doctors #dentist-page .content-row .doc-col .textcontain h5 {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.single-doctors #dentist-page .content-row .doc-col .affiliate-content {
+  border: 3px solid #76adce63;
+  background: #76adce63;
+  border-radius: 25px;
+  padding: 2rem;
+}
+.single-doctors #dentist-page .content-row .doc-col .affiliate-content .sponscontent {
+  color: #e01010;
+}
+.single-doctors #dentist-page .content-row .doc-col .affiliate-content .sponcontent_contain h2 {
+  margin-bottom: 10px;
+}
+.single-doctors #dentist-page .content-row .bio-col {
+  display: none;
+}
+/* ====================================================
+    hero-main block
+======================================================*/
+.hero {
+  padding: 12rem 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 60%;
+  background-color: #ffffff85;
+  background-blend-mode: overlay;
+}
+.hero .hero-content p {
+  font-weight: bold;
+}
+/* ====================================================
+    Slant CTA block
+======================================================*/
+.slant-cta {
+  background-image: url('/wp-content/uploads/2022/08/tooth-outline-removebg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right 4em;
+  background-color: #76adce2b;
+}
+@media (max-width: 767px) {
+  .slant-cta {
+    background-image: none;
+  }
+}
+.slant-cta .content__contain {
+  padding: 2em 0;
+  align-items: center;
+}
+.slant-cta .content__contain .imgcol .imgwrap {
+  text-align: center;
+}
+.slant-cta .content__contain .imgcol .imgwrap .slant_cta_img {
+  max-width: 425px;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  padding-top: 2rem;
+  background: #fff;
+}
+@media (max-width: 767px) {
+  .slant-cta .content__contain .imgcol .imgwrap .slant_cta_img {
+    background: transparent;
+    margin-top: 2rem;
+  }
+}
+/* ====================================================
+    Simple CTA
+======================================================*/
+#simple-cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-top: 5px solid #05D2F8;
+  margin-top: 15px;
+}
+#simple-cta .content-col .cta-head {
+  font-family: 'Lato', sans-serif;
+  font-size: 38px;
+  line-height: 48px;
+  font-weight: 500;
+  color: #11112d;
+}
+#simple-cta .content-col p.cta-copy {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 25px 0;
+}
+#simple-cta .content-col a.cta-link {
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  color: #11112d;
+  font-size: 21px;
+  font-weight: bold;
+  border: 2px solid #11112d;
+  border-radius: 15px;
+  background-color: transparent;
+  padding: 10px 20px;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+#simple-cta .content-col a.cta-link:hover,
+#simple-cta .content-col a.cta-link:focus {
+  background-color: #3252DB;
+  color: #fff;
+}
+/* ====================================================
+    Procedure Grid
+======================================================*/
+#procedure_grid {
+  padding: 5rem 2rem;
+}
+#procedure_grid .grid_row .icon-col {
+  margin: 20px 0;
+}
+#procedure_grid .grid_row .icon-col .icon-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5rem;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+/* ====================================================
+    Medical Disclaimer
+======================================================*/
+.page__temp {
+  padding: 3rem 2rem;
+}
+/* ====================================================
+    FAQ Block
+======================================================*/
+#faq_section {
+  padding: 4.5rem 0;
+}
+#faq_section .faq_main_wrap {
+  max-width: 900px;
+  background: #76adce2b;
+  border: 1px solid #76adce63;
+  padding: 0;
+}
+#faq_section .faq_main_wrap .faq_row {
+  padding: 1.5rem;
+  border: 1px solid #76adce63;
+  cursor: pointer;
+  position: relative;
+}
+#faq_section .faq_main_wrap .faq_row.arrow_trns .faq_question h4::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+#faq_section .faq_main_wrap .faq_row .faq_question h4 {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 1rem 0;
+}
+@media (max-width: 767px) {
+  #faq_section .faq_main_wrap .faq_row .faq_question h4 {
+    font-size: 18px;
+  }
+}
+#faq_section .faq_main_wrap .faq_row .faq_question h4::after {
+  content: '\f106';
+  position: absolute;
+  right: 5rem;
+  top: 3.8rem;
+  transform: translateY(-50%);
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+@media (max-width: 767px) {
+  #faq_section .faq_main_wrap .faq_row .faq_question h4::after {
+    right: 2rem;
+  }
+}
+#faq_section .faq_main_wrap .faq_row .faq_answer {
+  display: none;
+}
+/* ====================================================
+    Procedure (Single)
+======================================================*/
+.single-procedures .procedures_hero {
+  background-position: center 40%;
+}
+.single-procedures .procedure__temp {
+  padding: 3rem 2rem;
+}
+.archive {
+  /* ====================================================
+    Procedure (Archive)
+======================================================*/
+}
+.archive#procedure__arc {
+  padding: 2rem;
+}
+.archive#procedure__arc .procedure__top {
+  padding: 0rem 2rem 4rem;
+}
+.archive#procedure__arc .procedure__top h2 {
+  margin-bottom: 1rem;
+}
+.archive#procedure__arc .procedure__main .procedure_col {
+  padding: 3rem 0;
+}
+.archive#procedure__arc .procedure__main .procedure_col:not(:last-of-type) {
+  border-bottom: 1px solid #62707c;
+}
+.archive#procedure__arc .procedure__main .procedure_col .proc_title {
+  font-size: 2.3rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.85px;
+  display: block;
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .archive#procedure__arc .procedure__main .procedure_col .proc_title {
+    font-size: 2rem;
+  }
+}
+/* ====================================================
+    About Page
+======================================================*/
+#body__about #about-hero {
+  background-position: center center;
+}
+#body__about .slant-cta {
+  background-color: rgba(5, 211, 247, 0.2);
+}
+#body__about .slant-cta img {
+  padding: 0;
+}
+.formdisclaim {
+  padding: 2rem;
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.7);
+  max-width: 550px;
+  margin: 0 auto 3rem;
+}
+.formdisclaim h3 {
+  margin: 0;
+}
+#body__Doctors #doc__arc {
+  padding: 2rem;
+}
+#body__Doctors #doc__arc .doc__main .doc_col {
+  margin-bottom: 1.5rem;
+  padding: 0 2rem;
+}
+#body__Doctors #doc__arc .doc__main .doc_col .docwrap {
+  padding: 2rem;
+  border: 3px solid #76adce63;
+  background: #76adce63;
+  border-radius: 25px;
+  box-shadow: 0px 3px 6px #00000030;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#body__Doctors #doc__arc .doc__main .doc_col .docwrap img {
+  max-width: 300px;
+  width: 100%;
+  max-height: 345px;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+#body__Doctors #doc__arc .doc__main .doc_col .docwrap:hover,
+#body__Doctors #doc__arc .doc__main .doc_col .docwrap:focus {
+  background: #76acce70;
+  box-shadow: 0px 6px 9px #00000030;
+}
+/* ====================================================
+    Procedure CTA
+======================================================*/
+.cta_outer {
+  background-image: url('/wp-content/uploads/2023/01/whiten_bgmin-scaled.jpeg');
+  background-size: cover;
+  background-position: left center;
+  padding: 7rem 0;
+  background-color: #ffffffbf;
+  background-blend-mode: overlay;
+}
+.cta_outer .cta-content p {
+  font-weight: bold;
+  font-size: 18px;
+}
